@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>Enter the number1 :</td>
+			<td><input type="number" id="number1" name=""></td>
+		</tr>
+		<tr>
+			<td>Enter the number2 :</td>
+			<td><input type="number" id="number2" name=""></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" value="+" name="" id="add " onclick="add()">
+				<input type="button" value="-" name="" id="sub" onclick="sub()">
+				<input type="button" value="*" name="" id="mul" onclick="mul()">
+				<input type="button" value="/" name="" id="div" onclick="div()">
+			</td>
+		</tr>
+
+			<tr align="center">
+				<td><h1 id="ans">Answer</h1></td>
+			</tr>
+
+		<script type="text/javascript">
+
+			function add(){
+
+				var ans = parseInt(number1.value)+parseInt(number2.value);
+				var a=document.getElementById("number1");
+				var b=document.getElementById("number2");
+
+				var ansDisplay=document.getElementById("ans");
+				ansDisplay.innerHTML=ans;
+
+			}
+
+			function sub(){
+
+				var ans = parseInt(number1.value)-parseInt(number2.value);
+				var a=document.getElementById("number1");
+				var b=document.getElementById("number2");
+
+				var ansDisplay=document.getElementById("ans");
+				ansDisplay.innerHTML=ans;
+
+
+			}
+
+			function mul(){
+
+				var ans = parseInt(number1.value)*parseInt(number2.value);
+				var a=document.getElementById("number1");
+				var b=document.getElementById("number2");
+
+				var ansDisplay=document.getElementById("ans");
+				ansDisplay.innerHTML=ans;
+
+
+			}
+
+			function div(){
+
+
+				var ans = parseInt(number1.value)/parseInt(number2.value);
+				var a=document.getElementById("number1");
+				var b=document.getElementById("number2");
+
+				var ansDisplay=document.getElementById("ans");
+				ansDisplay.innerHTML=ans;
+
+
+			}
+
+
+		</script>
+
+
+
+	</table>
+</body>
+</html>
