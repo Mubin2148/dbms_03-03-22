@@ -12,11 +12,12 @@ class Stack1{
 			a[top]=ch;
 		}
 	}
-	public void pop(){
+	public int pop(){
 		if(top<=-1){
 			System.out.println("Stack underflow");
 		}
 		else{
+			return top;
 			top--;
 		}
 	}
