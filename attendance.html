@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Attendance</title>
+
+	<style type="text/css">
+
+		#text{
+
+			width: 30%;
+			height: 25vh;
+			background-color: blanchedalmond;
+			position: fixed;
+			margin-top: 150px;
+			margin-left: 250px;
+
+		}
+	
+	</style>
+
+</head>
+<body>
+
+	<input type="button" value="Select All" id="check" name="" onclick="SelectAll()">
+	<input type="button" value="UncheckAll" id="Uncheck" name="" onclick="Uncheck()">
+
+
+	<br>
+
+	<div id="text">
+
+
+	</div>
+
+	<script type="text/javascript">
+
+
+
+		for(i=101;i<166;i++)
+		{
+			document.write("<input type=\"checkbox\" id=\"check\" name=\"attcheck\">"+" "+i+"</br>");
+		}
+
+			document.write("</br>");
+
+		for(i=201;i<286;i++)
+		{
+			document.write("<input type=\"checkbox\" id=\"check\" name=\"attcheck\">"+" "+i+"</br>");
+
+		}
+
+		document.write("</br>");
+
+		for(i=301;i<365;i++)
+		{
+			document.write("<input type=\"checkbox\" id=\"check\" name=\"attcheck\">"+" "+i+"</br>");
+
+		}
+
+
+		function SelectAll(){
+
+			var c=document.getElementsByName('attcheck');
+
+			for(i=0;i<c.length;i++)
+			{
+				c[i].checked=true;
+			}
+		}
+
+		function Uncheck(){
+
+			var c=document.getElementsByName('attcheck');
+
+			for(i=0;i<c.length;i++)
+			{
+				c[i].checked=false;
+			}
+		}
+
+		var c=document.getElementsByName('attcheck');
+
+		for(i=0;i<c.length;i++)
+			{
+				
+				if(c[i].checked=true)
+				{
+					a[i]=c[i];
+				}
+			}
+
+			for(i=0;i<c.length;i++)
+			{
+				var c=document.getElementsByName('attcheck');
+
+				console.log(a[i]+",");
+
+			}
+
+
+	
+	</script>
+
+</body>
+</html>
