@@ -8,7 +8,7 @@
 		#snake{
 			height: 30vh;
 			width: 20vw;
-			position: absolute;
+			position:absolute;
 			margin: 100px;
 		}
 
@@ -26,7 +26,7 @@
 		</tr>
 		<tr>
 			<td>
-				<input type="button" id="up" value="go Up" name="" onclick="goUp()">
+				<input type="button" id="up" value="go Up  " name="" onclick="goUp()">
 			</td>
 			<td>
 		<input type="button" id="down" value="go Down" name="" onclick="goDown()">
@@ -38,18 +38,78 @@
 
 		<script type="text/javascript">
 
-			b=setInterval(goLeft(),100);
+				temp=100;
+
+				var e;
+				var b;
+				var c;
+				var d;
+
+				
 
 				function goLeft(){
 
-					a=document.getElementById("snake");
+					e=setInterval(goLeft,1000);
+
+					clearInterval(b);
+					clearInterval(c);
+					clearInterval(d);
+
+
+					var a=document.getElementById("snake");
+					temp--;
+					a.style.marginLeft=temp+"px";
+					a.src="snakeLeft.png";					
+				}
+
+				function goRight(){
+
+					b=setInterval(goRight,100);
+
+					clearInterval(e);
+					clearInterval(c);
+					clearInterval(d);
+
+
+					var a=document.getElementById("snake");
 					
-					a.style.position++;
-
-
+					temp++;
+					a.style.marginLeft=temp+"px";
+					a.src="snakeRight.png"
 
 				}
 
+				function goUp(){
+
+						c=setInterval(goUp,1000);
+
+					clearInterval(b);
+					clearInterval(e);
+					clearInterval(d);
+
+					var a=document.getElementById("snake");
+					
+					temp--;
+					a.style.marginTop=temp+"px";
+					a.src="snakeUp.png";
+				}
+
+				function goDown(){
+
+					d=setInterval(goDown,1000);
+
+					clearInterval(b);
+					clearInterval(c);
+					clearInterval(e);
+
+
+					var a=document.getElementById("snake");
+					
+					temp++;
+					a.style.marginTop=temp+"px";
+					a.src="snakeDown.png"
+
+				}
 
 		</script>
 
