@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SNAKE_GAME</title>
+
+	<style type="text/css">
+		
+		#snake{
+			height: 30vh;
+			width: 20vw;
+			position: absolute;
+			margin: 100px;
+		}
+
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<input type="button" id="left" value="go Left" name="" onclick="goLeft()">
+			</td>
+			<td>
+		<input type="button" id="right" value="go Right" name="" onclick="goRight()">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" id="up" value="go Up" name="" onclick="goUp()">
+			</td>
+			<td>
+		<input type="button" id="down" value="go Down" name="" onclick="goDown()">
+			</td>
+		</tr>
+	</table>
+
+		<img id="snake" src="snake.png">
+
+		<script type="text/javascript">
+
+			b=setInterval(goLeft(),100);
+
+				function goLeft(){
+
+					a=document.getElementById("snake");
+					
+					a.style.position++;
+
+
+
+				}
+
+
+		</script>
+
+
+</body>
+</html>
